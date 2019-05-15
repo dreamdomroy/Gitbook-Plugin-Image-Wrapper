@@ -34,10 +34,8 @@ var wrapImageTags = function(page){
         // Build the wrapper
         var h1Wrapper = $('<div style="text-align: center;">');
         // Get the image object
-        var h1 = $(this).innerHTML;
-        console.log(h1)
-        var $hh1 = $('<h1>')
-                        .attr('value', h1.attr('value'));
+        var h1 = $(this);
+        var $hh1 = $('<h1>');
         h1Wrapper.append($hh1);
         $(this).before(h1Wrapper);
         $(this).remove();
