@@ -28,7 +28,20 @@ var wrapImageTags = function(page){
         // Remove the image
         $(this).remove();
     });
-
+    
+    // Loop through each h1 found in the page content
+    $('h1').each(function(){
+        // Build the wrapper
+        var h1Wrapper = $('<div style="text-align: center;">');
+        // Get the image object
+        var h1 = $(this);
+        var $hh1 = $('<h1>')
+                        .attr('value', h1.attr('value'));
+        h1Wrapper.append($hh1);
+        $(this).before(h1Wrapper);
+        $(this).remove();
+    });
+    
     page.content = $.html();
 
     return page;
