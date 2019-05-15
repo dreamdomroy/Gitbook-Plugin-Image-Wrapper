@@ -9,7 +9,7 @@ var wrapImageTags = function(page){
     $('img').each(function(){
 
         // Build the wrapper
-        var imageWrapper = $('<div>').addClass('image-wrapper');
+        var imageWrapper = $('<div style="text-align: center;">').addClass('image-wrapper');
 
         // Get the image object
         var img = $(this);
